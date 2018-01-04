@@ -26,7 +26,7 @@ composer require --prefer-dist yiioctopus/yii2-adminview "*"
 
 一旦扩展安装完成，你可以简单的使用它如以下代码：
 
-## Setting
+### Setting
 
 Edit @app/assets/AppAsset.php
 
@@ -51,7 +51,7 @@ class AppAsset extends AssetBundle
 
 Add 'yiioctopus\adminview\AdminviewAsset' to $depends
 
-## layouts
+### layouts
 
 The layouts @app/views/layouts/main.php code:
 
@@ -151,7 +151,7 @@ AppAsset::register($this);
 
 ```
 
-# Usage & Document demo
+### Usage & Document demo
 
 ```
 
