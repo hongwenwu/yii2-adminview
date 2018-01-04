@@ -26,6 +26,35 @@ composer require --prefer-dist yiioctopus/yii2-adminview "*"
 
 一旦扩展安装完成，你可以简单的使用它如以下代码：
 
+##Setting
+
+Edit @app/assets/AppAsset.php
+
+```
+
+class AppAsset extends AssetBundle
+{
+    public $basePath = '@webroot';
+    public $baseUrl = '@web';
+    public $css = [
+        'css/site.css',
+    ];
+    public $js = [
+    ];
+    public $depends = [
+        'yii\web\YiiAsset',
+        'yiioctopus\adminview\AdminviewAsset',
+    ];
+}
+
+```
+
+Add 'yiioctopus\adminview\AdminviewAsset' to $depends
+
+##layouts
+
+The layouts @app/views/layouts/main.php code:
+
 ```
 <?php
 
@@ -54,66 +83,66 @@ AppAsset::register($this);
 <body class="theme-blue">
 <?php $this->beginBody() ?>
 
-	<?php
-		MainHeader::begin([
-			'brandName' => 'Yii Octopus',
-			//'brandUrl' => 'http://www.hostname.com',
-			'userName' => 'yiioctopus',
-			'options' => [
-				'account' => [
-					'name' => '个人中心',
-					'url' => Url::to(['user/userinfo'],true),
-				],
-				'panel' => [
-					[
-						'name' => 'Users',
-						'url' => Url::to(['user/index'],true),
-					],
-					[
-						'name' => 'Security',
-						'url' => Url::to(['user/security'],true),
-					],
-				],
-				'logout' => [
-					'name' => '退出',
-					'url' => Url::to(['user/logout'],true),
-				],
-			]
-		]);
-		
-		MainMenu::begin([
-			'items' => [
-				[
-					'label' => Html::tag('i','',['class'=>'fa fa-fw fa-dashboard']).' Dashboard',
-					'target' => 'dashboard-menu',
-					'items' => [
-						[
-							'label' => 'Login',
-							'url' => ['site/login'],
-						],
-						[
-							'label' => 'media',
-							'url' => ['site/media'],
-						],
-					],
-				],
-			],
-			'options' => [
-				'active' => ['site/login'],
-			]
-		]);
-	?>
-
-	<div class="content">
+    <?php
+        MainHeader::begin([
+            'brandName' => 'Yii Octopus',
+            //'brandUrl' => 'http://www.hostname.com',
+            'userName' => 'yiioctopus',
+            'options' => [
+                'account' => [
+                    'name' => '个人中心',
+                    'url' => Url::to(['user/userinfo'],true),
+                ],
+                'panel' => [
+                    [
+                        'name' => 'Users',
+                        'url' => Url::to(['user/index'],true),
+                    ],
+                    [
+                        'name' => 'Security',
+                        'url' => Url::to(['user/security'],true),
+                    ],
+                ],
+                'logout' => [
+                    'name' => '退出',
+                    'url' => Url::to(['user/logout'],true),
+                ],
+            ]
+        ]);
         
-		<?= $content ?>
-		
-		<footer>
-			<hr>
-			<p class="pull-right">Collect from <a href="#" title="首页" target="_blank">首页</a></p>
-			<p>© <?= date('Y-m-d') ?> <a href="#" target="_blank">Portnine</a></p>
-		</footer>
-	</div>
+        MainMenu::begin([
+            'items' => [
+                [
+                    'label' => Html::tag('i','',['class'=>'fa fa-fw fa-dashboard']).' Dashboard',
+                    'target' => 'dashboard-menu',
+                    'items' => [
+                        [
+                            'label' => 'Login',
+                            'url' => ['site/login'],
+                        ],
+                        [
+                            'label' => 'media',
+                            'url' => ['site/media'],
+                        ],
+                    ],
+                ],
+            ],
+            'options' => [
+                'active' => ['site/login'],
+            ]
+        ]);
+    ?>
+
+    <div class="content">
+        
+        <?= $content ?>
+        
+        <footer>
+            <hr>
+            <p class="pull-right">Collect from <a href="#" title="首页" target="_blank">首页</a></p>
+            <p>© <?= date('Y-m-d') ?> <a href="#" target="_blank">Portnine</a></p>
+        </footer>
+    </div>
 
 <?php $this->endBody() ?>
 </body>
@@ -121,3 +150,7 @@ AppAsset::register($this);
 <?php $this->endPage() ?>
 
 ```
+
+#Usage & Document
+
+[http://yiioctopus.aimeen.com](http://yiioctopus.aimeen.com)

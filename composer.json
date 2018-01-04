@@ -2,12 +2,12 @@
     "name": "yiioctopus/yii2-adminview",
     "description": "Yii2 开源后台模板。使用非常简单，只需要简单几步就可完成！",
     "type": "yii2-extension",
-    "keywords": ["bootstrap","jquery","yii2","google-api"],
-    "homepage": "http://www.aimeen.com",
+    "keywords": ["yii2-extension","bootstrap","jquery","yii2","google-api"],
+    "homepage": "http://yiioctopus.aimeen.com",
     "license": "BSD 3-Clause",
     "authors": [
         {
-            "name": "wangzhonglin",
+            "name": "wzl",
             "email": "yiioctopus@163.com"
         }
     ],
