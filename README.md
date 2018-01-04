@@ -151,6 +151,6 @@ AppAsset::register($this);
 
 ```
 
-### Usage & Document demo
+# Usage & Document demo
 
-[http://yiioctopus.aimeen.com](http://yiioctopus.aimeen.com)
+[http://yiioctopus.aimeen.com/yii2-adminview](http://yiioctopus.aimeen.com/yii2-adminview)
