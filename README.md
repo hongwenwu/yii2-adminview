@@ -51,7 +51,7 @@ class AppAsset extends AssetBundle
 
 Add 'yiioctopus\adminview\AdminviewAsset' to $depends
 
-### layouts
+### Setting layouts
 
 The layouts @app/views/layouts/main.php code:
 
@@ -153,8 +153,4 @@ AppAsset::register($this);
 
 ### Usage & Document demo
 
-```
-
 [http://yiioctopus.aimeen.com](http://yiioctopus.aimeen.com)
-
-```
