@@ -16,7 +16,7 @@
     },
     "autoload": {
         "psr-4": {
-            "yiioctopus\\yii2-adminview\\": ""
+            "yiioctopus\\adminview\\": ""
         }
     }
 }
