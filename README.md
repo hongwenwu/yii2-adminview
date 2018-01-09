@@ -128,7 +128,7 @@ AppAsset::register($this);
                 ],
             ],
             'options' => [
-                'active' => ['site/login'],
+                'active' => [Yii::$app->controller->id .'/'. Yii::$app->controller->action->id],
             ]
         ]);
     ?>
@@ -153,4 +153,4 @@ AppAsset::register($this);
 
 # Usage & Document demo
 
-[http://yiioctopus.aimeen.com/yii2-adminview](http://yiioctopus.aimeen.com/yii2-adminview)
+[http://yiioctopus.aimeen.com/yii2-adminview](http://yiioctopus.aimeen.com/adminview)
