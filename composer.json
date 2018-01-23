@@ -4,7 +4,7 @@
     "type": "yii2-extension",
     "keywords": ["yii2-extension","bootstrap","jquery","yii2","google-api"],
     "homepage": "http://octopus.aimeen.com",
-    "license": "BSD 3-Clause",
+    "license": "BSD-3-Clause",
     "authors": [
         {
             "name": "wzl",
